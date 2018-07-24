@@ -1,0 +1,180 @@
+<?php
+// 5 properties :
+//     1 publicly modifiable
+//     4 internals
+// 5 methods :
+//     2 publicly accessibles
+//     1 only human can do together
+//     2 internals
+
+class Human
+{
+    public $hair = 5;
+    public $hairColor = '';
+    protected $marriedWith;
+    private $heart;
+    
+    /**
+     * @return number
+     */
+    public function getHair()
+    {
+        return $this->hair;
+    }
+
+    /**
+     * @return Ambigous <string, string>
+     */
+    public function getHairColor()
+    {
+        return $this->hairColor;
+    }
+
+    /**
+     * @return Human
+     */
+    public function getMarriedWith()
+    {
+        return $this->marriedWith;
+    }
+
+    /**
+     * @param number $hair
+     */
+    public function setHair($hair)
+    {
+        $this->hair = $hair;
+        return $this;
+    }
+
+    /**
+     * @param Ambigous <string, string> $hairColor
+     */
+    public function setHairColor($hairColor)
+    {
+        $this->hairColor = $hairColor;
+        return $this;
+    }
+
+    /**
+     * @param Human $marriedWith
+     */
+    public function setMarriedWith($marriedWith)
+    {
+        $this->marriedWith = $marriedWith;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeart()
+    {
+        return $this->heart;
+    }
+
+    /**
+     * @param mixed $heart
+     */
+    public function setHeart($heart)
+    {
+        if (!in_array($heart, ['big', 'little'])) {
+            return;
+        }
+        
+        $this->heart = $heart;
+        return $this;
+    }
+    
+    
+    
+    public function cut(Human $anotherHuman = null, int $length = 1)
+    {
+        if ($anotherHuman == null) {
+            $this->hair = $this->hair - $length;
+            return $this->hair;
+        }
+        
+        $anotherHuman->hair = $anotherHuman->hair - $length;
+        return $anotherHuman->hair;
+    }
+   
+    public function changeColor(string $color, Human $anotherHuman = null)
+    {
+        if ($anotherHuman instanceof Human) {
+            $anotherHuman->hairColor = $color;
+            return $anotherHuman->hairColor;
+        }
+        
+        $this->hairColor = $color;
+        return $this->hairColor;
+    }
+    
+    public function askForWedding(Human $anotherHuman)
+    {
+        $anotherHuman->wedding($this);
+    }
+    
+    protected function wedding(Human $anotherHuman)
+    {
+        if ($anotherHuman === $this) {
+            return;
+        }
+        
+        $this->marriedWith = $anotherHuman;
+        $anotherHuman->marriedWith = $this;
+    }
+    
+    function internal1(){}
+    function internal2(){}
+}
+
+class Vehicle
+{
+    public $color = 'grey';
+    protected $engine = 'strong';
+    private $owner = 'you';
+    
+    public function touchProp()
+    {
+        var_dump($this->color);
+        var_dump($this->engine);
+        var_dump($this->owner);
+        $this->sayA();
+    }
+    
+    public function touchPropOther(Vehicle $vecA)
+    {
+        var_dump($vecA->color);
+        var_dump($vecA->engine);
+        var_dump($vecA->owner);
+    }
+    
+    private function sayA()
+    {
+        var_dump('A');
+    }
+}
+
+$vec1 = new Vehicle();
+$vec2 = new Vehicle();
+
+$vec1->sayA();
+
+
+$humanObject = new Human();
+$humanObject->setHair('hair')
+    ->setHairColor('color')
+    ->setHeart('big')
+    ->setMarriedWith(new Human());
+
+
+
+
+
+
+
+
+
+
+

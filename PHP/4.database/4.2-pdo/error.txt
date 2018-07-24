@@ -1,0 +1,18 @@
+05/07/2018 - 27 - 15:05:29 -Error SQL: \r\nMessage: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fzbekjfnz kjnzek ze' at line 1\r\n\r\n05/07/2018 - 27 - 15:06:15 -Error SQL: \n\nMessage: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fzbekjfnz kjnzek ze' at line 1\r\n\r\n05/07/2018 - 27 - 15:06:42 -Error SQL: 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fzbekjfnz kjnzek ze' at line 1
+
+05/07/2018 - 27 - 15:06:43 -Error SQL: 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fzbekjfnz kjnzek ze' at line 1
+
+05/07/2018 - 27 - 15:07:03 -Error SQL: 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'fzbekjfnz kjnzek ze' at line 1
+
+05/07/2018 - 27 - 15:09:20 -Error SQL: 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELCT * FROM employees' at line 1
+
+05/07/2018 - 27 - 15:09:20 -Error SQL: 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELCT * FROM employees' at line 1
+
+05/07/2018 - 27 - 15:09:21 -Error SQL: 
+Message: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'SELCT * FROM employees' at line 1
+

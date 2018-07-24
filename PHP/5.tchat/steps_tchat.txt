@@ -1,0 +1,32 @@
+How we can create a tchat/comment module allowing us to register as member and leave messages ?
+
+#1 Create a database 'tchat' (PHPMYADMIN or shell)
+    > table User
+        -id_user (PK - AI)
+        -pseudo
+        -password
+        -email
+        -picture
+
+    > table Comment
+        -id_comment (PK - AI)
+        -id_user (FK)
+        -content
+        -datetime
+
+#2 Connect with the database
+
+#3 Forms : signin + signup
+
+#4 SIGNUP: Deal with the POST + security check => register in DTB (INSERT/SQL)
+
+#5 SIGNIN: Deal with the POST + security check => select in DTB (SELECT/SQL)
+
+#6 MESSAGE : form to send messages (INSERT/SQL)
+
+#7 MESSAGE : display the messages (SELECT/SQL)
+
+#8 LOGOUT
+
+#9 ... think about the v2 !
+
